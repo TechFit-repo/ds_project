@@ -45,9 +45,9 @@ class WeatherDataFeed:
         self.link='https://www.eirgridgroup.com/'
         self.files = ['2020/21','2018/19','2016/17','2014/15']
         
-    def get_weather_data(self, county='Dublin', latitude=53.33, longitude=-6.24, altitude=10):
+    def get_weather_data(self, county='Dublin', latitude=53.33, longitude=-6.24, altitude=10, save_location='./data/data'):
         self.county = Place(county, latitude, longitude, altitude)
-        self.forecast = Forecast(self.county, self.USER_AGENT, 'complete')
+        self.forecast = Forecast(self.county, self.USER_AGENT, 'complete', save_location)
         self.forecast.update()
         df = pd.DataFrame()
         for interval in self.forecast.data.intervals:
@@ -172,7 +172,6 @@ class WeatherDataFeed:
                 pass
         sleep(6)
         driver.close()
-
             
 if __name__ == '__main__':
     weather = WeatherDataFeed()
