@@ -106,7 +106,7 @@ class WeatherDataFeed:
             else:
                 pass
 
-    def get_historical_weather_data(self, url='https://cli.fusio.net/cli/climate_data/webdata/hly62092.zip', file_name='south_west_m3_buoys.csv'):
+    def get_historical_weather_data(self, url='https://cli.fusio.net/cli/climate_data/webdata/hly775.zip', file_name='south_west_cork_sherkinIsland.csv'):
         # download the file contents in binary format
         r = requests.get(url)
         # open method to open a file on your system and write the contents
@@ -120,15 +120,12 @@ class WeatherDataFeed:
                    'west_galway_mace_head.csv','west_mayo_newport.csv','west_mayo_claremorris.csv',
                    'west_galway_athenry.csv','north_west_roscommon_mt_dillon.csv','midlands_westmeath_mullingar.csv','midlands_meath_dunsany.csv',
                    'north_west_cavan_ballyhaise.csv','north_west_donegal_finner.csv']
-        list_19 = ['south_west_m3_buoys.csv','dublin_m2_buoy.csv','north_west_m4_buoy.csv','south_east_m5_buoys.csv']
         list_23 = ['south_west_kerry_valentia_observatory.csv','south_west_cork_airport.csv','shannon_clare_airport.csv','west_mayo_knock_airport.csv','dublin_airport.csv',
                    'west_mayo_belmullet.csv','dublin_casement.csv','north_west_donegal_malin_head.csv']
         if file_name in list_15:
             file = pd.read_csv(unzipped_file.open(filename.replace('.zip','.csv')), skiprows = 15)
         elif file_name in list_17:
             file = pd.read_csv(unzipped_file.open(filename.replace('.zip','.csv')), skiprows = 17)
-        elif file_name in list_19:
-            file = pd.read_csv(unzipped_file.open(filename.replace('.zip','.csv')), skiprows = 19)
         elif file_name in list_23:
             file = pd.read_csv(unzipped_file.open(filename.replace('.zip','.csv')), skiprows = 23)
         else:
@@ -192,12 +189,6 @@ if __name__ == '__main__':
     print('Dublin Casement data is updated')
     
     weather = WeatherDataFeed()
-    weather.get_weather_data(county='Dublin', latitude=53.46, longitude=-5.55, altitude=10)
-    weather.save_weather_data(file_name = 'dublin_m2_buoy.csv')
-    weather.clean_up_weather_data()
-    print('Dublin M2 Buoy data is updated')
-    
-    weather = WeatherDataFeed()
     weather.get_weather_data(county='Dublin', latitude=53.36, longitude=-6.33, altitude=10)
     weather.save_weather_data(file_name = 'dublin_phoenix_park.csv')
     weather.clean_up_weather_data()
@@ -239,12 +230,6 @@ if __name__ == '__main__':
     print('Donegal Malin Head data is updated')
     db = weather.df2
     
-    weather.get_weather_data(county='Donegal', latitude=55.01, longitude=-10.42, altitude=10)
-    weather.save_weather_data(file_name = 'north_west_m4_buoy.csv')
-    weather.clean_up_weather_data()
-    print('Donegal M4 Buoy data is updated')
-    db = weather.df2
-    
     weather.get_weather_data(county='Roscommon', latitude=53.73, longitude=-8.05, altitude=10)
     weather.save_weather_data(file_name = 'north_west_roscommon_mt_dillon.csv')
     weather.clean_up_weather_data()
@@ -281,12 +266,6 @@ if __name__ == '__main__':
     print('Shannon Tipperary Gurteen data is updated')
     db = weather.df2
     
-    weather.get_weather_data(county='Waterford', latitude=51.75, longitude=-6.81, altitude=10)
-    weather.save_weather_data(file_name = 'south_east_m5_buoys.csv')
-    weather.clean_up_weather_data()
-    print('South East Waterford M5 Buoy data is updated')
-    db = weather.df2
-    
     weather.get_weather_data(county='Wexford', latitude=52.34, longitude=-6.46, altitude=10)
     weather.save_weather_data(file_name = 'south_east_wexford_johnstownii.csv')
     weather.clean_up_weather_data()
@@ -316,12 +295,6 @@ if __name__ == '__main__':
     weather.save_weather_data(file_name = 'south_west_kerry_valentia_observatory.csv')
     weather.clean_up_weather_data()
     print('South West Kerry Valentia Observatory data is updated')
-    
-    weather.get_weather_data(county='Kerry', latitude=51.23, longitude=-10.51, altitude=10)
-    weather.save_weather_data(file_name = 'south_west_m3_buoys.csv')
-    weather.clean_up_weather_data()
-    print('South West Kerry M3 Buoy data is updated')
-    db = weather.df2
     
     weather.get_weather_data(county='Galway', latitude=53.30, longitude=-8.75, altitude=10)
     weather.save_weather_data(file_name = 'west_galway_athenry.csv')
@@ -358,8 +331,3 @@ if __name__ == '__main__':
     weather.save_weather_data(file_name = 'west_mayo_newport.csv')
     weather.clean_up_weather_data()
     print('West Mayo Newport data is updated')
-    
-    
-
-    
-

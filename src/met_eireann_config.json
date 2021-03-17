@@ -1,12 +1,10 @@
 {
   "dict": {
-  "https://cli.fusio.net/cli/climate_data/webdata/hly62092.zip": "south_west_m3_buoys.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly775.zip": "south_west_cork_sherkinIsland.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly2275.zip": "south_west_kerry_valentia_observatory.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly1075.zip": "south_west_cork_roches_point.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly3904.zip": "south_west_cork_airport.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly575.zip": "shannon_fermoy_moore_park.csv",
-  "https://cli.fusio.net/cli/climate_data/webdata/hly62094.zip": "south_east_m5_buoys.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly1775.zip": "south_east_wexford_johnstownii.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly375.zip": "midlands_carlow_oak_park.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly1475.zip": "shannon_tipperary_gurteen.csv",
@@ -23,11 +21,9 @@
   "https://cli.fusio.net/cli/climate_data/webdata/hly532.zip": "dublin_airport.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly175.zip": "dublin_phoenix_park.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly3723.zip": "dublin_casement.csv",
-  "https://cli.fusio.net/cli/climate_data/webdata/hly62091.zip": "dublin_m2_buoy.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly675.zip": "north_west_cavan_ballyhaise.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly1275.zip": "north_west_sligo_markree.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly2075.zip": "north_west_donegal_finner.csv",
-  "https://cli.fusio.net/cli/climate_data/webdata/hly62093.zip": "north_west_m4_buoy.csv",
   "https://cli.fusio.net/cli/climate_data/webdata/hly1575.zip": "north_west_donegal_malin_head.csv"
   }
 }
